@@ -12,9 +12,9 @@ ThemeData mytheme() {
       // fontFamily: 'Billabong',
       appBarTheme: AppBarTheme(
         titleTextStyle: TextStyle(
-          color: HexColor('#35bdb4'),
-          fontSize: 22,
-        ),
+            color: HexColor('#000000'),
+            fontSize: 22,
+            fontFamily: 'IBMPlexSansThai'),
         centerTitle: true,
         color: HexColor('#ffffff'),
         elevation: 1,

@@ -223,7 +223,7 @@ class _ProductPageState extends State<ProductPage> {
                   ),
                   Container(
                       child: SizedBox(
-                          height: 27,
+                          height: 30,
                           // width: 115,
                           child: shopping
                               ? RaisedButton(

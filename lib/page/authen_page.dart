@@ -17,13 +17,12 @@ class _AuthenPageState extends State<AuthenPage> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        decoration: const BoxDecoration(color: Colors.grey
-            // image: DecorationImage(
-            //   image: NetworkImage(
-            //       'https://www.hangles.com/assets/img/thumb/photo-1000x1200--1.jpg'),
-            //   fit: BoxFit.cover
-            // ),
-            ),
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: NetworkImage(
+                  'https://www.hangles.com/assets/img/thumb/photo-1000x1200--1.jpg'),
+              fit: BoxFit.cover),
+        ),
         child: Padding(
           padding: const EdgeInsets.only(bottom: 150),
           child: Column(

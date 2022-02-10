@@ -239,7 +239,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   Row(
                     children: [
                       SizedBox(
-                          height: 27,
+                          height: 30,
                           // width: 100,
                           child: follow
                               ? RaisedButton(

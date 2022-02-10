@@ -11,6 +11,7 @@ import 'package:hangles/page/inbox_page.dart';
 import 'package:hangles/page/login_page.dart';
 import 'package:hangles/page/menu_page.dart';
 import 'package:hangles/page/otp_page.dart';
+import 'package:hangles/page/popular_page.dart';
 import 'package:hangles/page/product_page.dart';
 import 'package:hangles/page/profile_page.dart';
 import 'package:hangles/page/register_page.dart';
@@ -42,26 +43,27 @@ class MyApp extends StatelessWidget {
       // ),
       debugShowCheckedModeBanner: false,
       theme: mytheme(),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => AuthenPage(),
-        '/login': (context) => LoginPage(),
-        '/bottom': (context) => Bottombar(),
-        '/home': (context) => HomePage(),
-        '/register': (context) => RegisterPage(),
-        '/create': (context) => Create_Profile(),
-        '/forgot': (context) => ForgotPassPage(),
-        '/addproduct': (context) => Add_Product(),
-        '/menu': (context) => MenuPage(),
-        '/review': (context) => ReviewPage(),
-        '/otp': (context) => OTPPage(),
-        '/search': (context) => SearchPage(),
-        '/chat': (context) => ChatPage(),
-        '/inbox': (context) => InboxPage(image: '', name: ''),
-        '/profile': (context) => ProfilePage(),
-        '/product': (context) => ProductPage(image: '', name: ''),
-      },
-      // home: ChatTwoPage(),
+      // initialRoute: '/',
+      // routes: {
+      //   '/': (context) => AuthenPage(),
+      //   '/login': (context) => LoginPage(),
+      //   '/bottom': (context) => Bottombar(),
+      //   '/home': (context) => HomePage(),
+      //   '/popular': (context) => PopularPage(),
+      //   '/register': (context) => RegisterPage(),
+      //   '/create': (context) => Create_Profile(),
+      //   '/forgot': (context) => ForgotPassPage(),
+      //   '/addproduct': (context) => Add_Product(),
+      //   '/menu': (context) => MenuPage(),
+      //   '/review': (context) => ReviewPage(),
+      //   '/otp': (context) => OTPPage(),
+      //   '/search': (context) => SearchPage(),
+      //   '/chat': (context) => ChatPage(),
+      //   '/inbox': (context) => InboxPage(image: '', name: ''),
+      //   '/profile': (context) => ProfilePage(),
+      //   '/product': (context) => ProductPage(image: '', name: ''),
+      // },
+      home: MenuPage(),
     );
   }
 }
