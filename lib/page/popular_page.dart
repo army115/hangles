@@ -95,7 +95,7 @@ class _PopularPageState extends State<PopularPage> {
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisSpacing: 5,
                   mainAxisSpacing: 5,
-                  crossAxisCount: 1,
+                  crossAxisCount: 2,
                 ),
                 itemCount: _items.length,
                 itemBuilder: (context, index) {

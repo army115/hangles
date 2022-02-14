@@ -135,13 +135,26 @@ class _HomePageState extends State<HomePage> {
               mainAxisSpacing: 5,
               itemCount: 4,
               itemBuilder: (context, index) {
-                return Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage(_items[index].image),
-                      fit: BoxFit.cover,
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ProductPage(
+                            image: _items[index].image,
+                            name: _items[index].name),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: NetworkImage(
+                          _items[index].image,
+                        ),
+                      ),
                     ),
-                    // borderRadius: BorderRadius.circular(10.0)
                   ),
                 );
               },

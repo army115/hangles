@@ -82,14 +82,20 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
             actions: [
               IconButton(
+                  padding: EdgeInsets.only(right: 10),
+                  constraints: BoxConstraints(),
                   iconSize: 30,
                   onPressed: () {},
                   icon: const Icon(Icons.shopping_bag_outlined)),
               IconButton(
+                  padding: EdgeInsets.only(right: 10),
+                  constraints: BoxConstraints(),
                   iconSize: 30,
                   onPressed: () {},
                   icon: const Icon(CupertinoIcons.ellipsis_vertical)),
               IconButton(
+                  padding: EdgeInsets.only(right: 10),
+                  constraints: BoxConstraints(),
                   iconSize: 30,
                   onPressed: () {
                     Navigator.pushNamed(context, '/menu');

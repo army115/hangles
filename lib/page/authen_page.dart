@@ -69,8 +69,9 @@ class _AuthenPageState extends State<AuthenPage> {
   }
 
   Widget login() {
-    return SizedBox(
-      width: 230,
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 60),
+      width: MediaQuery.of(context).size.width,
       child: RaisedButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         color: Colors.white,
@@ -83,22 +84,28 @@ class _AuthenPageState extends State<AuthenPage> {
   }
 
   Widget facebook() {
-    return FacebookAuthButton(
-        onPressed: () {},
-        darkMode: false,
-        text: 'ดำเนินการต่อด้วย Facebook',
-        width: 230,
-        iconSize: 25,
-        textStyle: TextStyle(fontSize: 13, color: Colors.white));
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 60),
+      child: FacebookAuthButton(
+          onPressed: () {},
+          darkMode: false,
+          text: 'ดำเนินการต่อด้วย Facebook',
+          // width: 230,
+          iconSize: 25,
+          textStyle: TextStyle(fontSize: 13, color: Colors.white)),
+    );
   }
 
   Widget gmail() {
-    return GoogleAuthButton(
-        onPressed: () {},
-        darkMode: true,
-        text: 'ดำเนินการต่อด้วย Gmail',
-        width: 230,
-        iconSize: 25,
-        textStyle: TextStyle(fontSize: 13, color: Colors.white));
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 60),
+      child: GoogleAuthButton(
+          onPressed: () {},
+          darkMode: true,
+          text: 'ดำเนินการต่อด้วย Gmail',
+          // width: 230,
+          iconSize: 25,
+          textStyle: TextStyle(fontSize: 13, color: Colors.white)),
+    );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hangles/Bottombar.dart';
+import 'package:hangles/page/Comment_page.dart';
 import 'package:hangles/page/Test.dart';
 import 'package:hangles/page/add_product_page.dart';
 import 'package:hangles/page/chat_page.dart';
@@ -8,8 +9,9 @@ import 'package:hangles/page/forgot_pass.dart';
 import 'package:hangles/page/home_page.dart';
 import 'package:hangles/page/authen_page.dart';
 import 'package:hangles/page/inbox_page.dart';
+import 'package:hangles/page/like_page.dart';
 import 'package:hangles/page/login_page.dart';
-import 'package:hangles/page/menu_page.dart';
+import 'package:hangles/page/menu/menu_page.dart';
 import 'package:hangles/page/otp_page.dart';
 import 'package:hangles/page/popular_page.dart';
 import 'package:hangles/page/product_page.dart';
@@ -43,27 +45,29 @@ class MyApp extends StatelessWidget {
       // ),
       debugShowCheckedModeBanner: false,
       theme: mytheme(),
-      // initialRoute: '/',
-      // routes: {
-      //   '/': (context) => AuthenPage(),
-      //   '/login': (context) => LoginPage(),
-      //   '/bottom': (context) => Bottombar(),
-      //   '/home': (context) => HomePage(),
-      //   '/popular': (context) => PopularPage(),
-      //   '/register': (context) => RegisterPage(),
-      //   '/create': (context) => Create_Profile(),
-      //   '/forgot': (context) => ForgotPassPage(),
-      //   '/addproduct': (context) => Add_Product(),
-      //   '/menu': (context) => MenuPage(),
-      //   '/review': (context) => ReviewPage(),
-      //   '/otp': (context) => OTPPage(),
-      //   '/search': (context) => SearchPage(),
-      //   '/chat': (context) => ChatPage(),
-      //   '/inbox': (context) => InboxPage(image: '', name: ''),
-      //   '/profile': (context) => ProfilePage(),
-      //   '/product': (context) => ProductPage(image: '', name: ''),
-      // },
-      home: MenuPage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => AuthenPage(),
+        '/login': (context) => LoginPage(),
+        '/bottom': (context) => Bottombar(),
+        '/home': (context) => HomePage(),
+        '/popular': (context) => PopularPage(),
+        '/register': (context) => RegisterPage(),
+        '/create': (context) => Create_Profile(),
+        '/forgot': (context) => ForgotPassPage(),
+        '/addproduct': (context) => Add_Product(),
+        '/menu': (context) => MenuPage(),
+        '/review': (context) => ReviewPage(),
+        '/otp': (context) => OTPPage(),
+        '/search': (context) => SearchPage(),
+        '/chat': (context) => ChatPage(),
+        '/inbox': (context) => InboxPage(image: '', name: ''),
+        '/profile': (context) => ProfilePage(),
+        '/product': (context) => ProductPage(image: '', name: ''),
+        '/likes': (context) => LikePage(),
+        '/comments': (context) => CommentPage(),
+      },
+      // home: MenuPage(),
     );
   }
 }

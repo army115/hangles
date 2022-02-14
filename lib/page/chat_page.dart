@@ -171,38 +171,46 @@ class _ChatPageState extends State<ChatPage> {
                   Expanded(
                     child: SingleChildScrollView(
                       physics: const BouncingScrollPhysics(),
-                      child: ListView.separated(
-                        primary: false,
-                        shrinkWrap: true,
-                        itemCount: _items.length,
-                        itemBuilder: (context, index) {
-                          return ListTile(
-                            leading: CircleAvatar(
-                              radius: 20,
-                              backgroundImage:
-                                  NetworkImage(_items[index].image),
-                            ),
-                            title: Text(
-                              '${_items[index].name}',
-                            ),
-                            trailing: Icon(Icons.arrow_forward_ios_rounded),
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => InboxPage(
-                                      image: _items[index].image,
-                                      name: _items[index].name),
+                      child: Column(
+                        children: [
+                          ListView.separated(
+                            primary: false,
+                            shrinkWrap: true,
+                            itemCount: _items.length,
+                            itemBuilder: (context, index) {
+                              return ListTile(
+                                leading: CircleAvatar(
+                                  radius: 20,
+                                  backgroundImage:
+                                      NetworkImage(_items[index].image),
                                 ),
+                                title: Text(
+                                  '${_items[index].name}',
+                                ),
+                                trailing: Icon(Icons.arrow_forward_ios_rounded),
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => InboxPage(
+                                          image: _items[index].image,
+                                          name: _items[index].name),
+                                    ),
+                                  );
+                                },
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15)),
                               );
                             },
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15)),
-                          );
-                        },
-                        separatorBuilder: (context, index) => Divider(
-                          color: Colors.grey,
-                        ),
+                            separatorBuilder: (context, index) => Divider(
+                              color: Colors.grey,
+                            ),
+                          ),
+                          Divider(
+                            height: 0,
+                            color: Colors.grey,
+                          )
+                        ],
                       ),
                     ),
                   ),
